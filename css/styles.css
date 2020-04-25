@@ -1,0 +1,44 @@
+/* navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    display: block;
+}
+
+nav ul li {
+    display: none;
+}
+
+nav ul li a {
+    color: #fffdeb;
+    background-color: #D4747C;
+    border: 1px #fffdeb solid;
+    display: block;
+    padding:10px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* html selectors */
+body {
+    text-align: center;
+    background-color: #fffdeb;
+}
+
+footer {
+    color: #232B35;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* class selectors */
+
+.show li{
+    display: block;
+}
+
+/* id selectoors */

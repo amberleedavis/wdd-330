@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <title>Week 01 Notes</title>
+    
+</head>
+<body>
+    <section>
+    <h1>Week 01 Notes</h1>
+    <h2>Local Storage</h2>
+    <p>
+        While reading "Doing Stuff with Web Things", I'm learning about local storage.
+        I honestly have never heard of the term "local storage" before, or maybe I have and I 
+        don't remember. From what I understand, local storage helps pair things together.
+        In the story editor example, the story tself (storyHTML) should be labeled the actual
+        name the story (storyName). Essentally, key value pairs are stored are saved in a web browser.
+    </p>
+
+    <p>
+        After doing my own research in w3schools, I also found out that local storage has no expiraton date,
+        and the data will not be deleted when the browser is closed. It can be accessed at any time, but it will be
+        read-only. This will be handy with applications. In the reading it mentions that no one would want to use an
+        app that can't remember what you did the last time you visited.
+    </p>
+
+</section>
+
+<section>
+    <p>Here is the example of code I created following along with the book. There was also HTML and CSS, but the JavaScript
+        was the main focus of the lesson.
+    </p>
+    <code>
+            function loadStory(){
+                var storyName = document.getElementById('name_input').value
+                var storyHTML = localStorage.getItem(storyName)
+                document.getElementById('story_editor').value = storyHTML
+            
+            }
+            <br/>
+            function saveStory(){
+                var storyName = document.getElementById('name_input').value
+                var storyHTML = document.getElementById('story_editor').value
+                localStorage.setItem(storyName, storyHTML)
+            }
+            <br/>
+            function displayStory(){
+                var storyHTML = document.getElementById('story_editor').value
+                document.getElementById('story_display').innerHTML = storyHTML
+                
+            }
+    </code>
+</section>
+    
+</body>
+</html>
