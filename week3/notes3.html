@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 3 Notes</title>
+    <link rel="stylesheet" href="css/notes.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Raleway:wght@200&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <h1>Week 03 Notes</h1>
+        <h2>JavaScript - This</h2>
+        <p> "This" in JavaScript can be confusing when first learning about it, but I'm starting to see how important it is
+            to know how to use it in my code. "This" will take any object you have listed under your variable and display it
+            accordingly. It's as simple as that! Here is an example of that:
+        </p>
+
+        <code>
+                let person = {
+                    name: Amber;
+                    lastName: Davis;
+                    age: 22;
+                    location: Rexburg;
+                }
+    
+                hello(){
+                    console.log("hello " + this.name + " " + this.lastName);
+                }
+    
+                person.hello();
+                </code>
+                    
+        <p>
+           From the reading, it states that if you were to use person.name or person.lastName, you could get the same result, but if you
+        were to use person again somewhere else in your code, you could be outputting the wrong information. That's why "this" comes in handy.
+        It identifies the variable it is inside of and outputs only that information you're targeting.
+        </p>
+
+    </section>
+
+</body>
+
+</html>
