@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 4 Team Activity</title>
+    <link rel="stylesheet" href="css/notes.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Raleway:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+        }
+
+        .vertical {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .horozontal {
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tic Tac Toe Game</h1>
+    <table>
+        <tr>
+            <td onclick="tap('box1')" id="box1"></td>
+            <td onclick="tap('box2')" id="box2" class="vertical"></td>
+            <td onclick="tap('box3')" id="box3"></td>
+        </tr>
+        <tr>
+            <td onclick="tap('box4')" id="box4" class="horozontal"></td>
+            <td onclick="tap('box5')" id="box5" class="vertical horozontal"></td>
+            <td onclick="tap('box6')" id="box6" class="horozontal"></td>
+        </tr>
+        <tr>
+            <td onclick="tap('box7')" id="box7"></td>
+            <td onclick="tap('box8')" id="box8" class="vertical"></td>
+            <td onclick="tap('box9')" id="box9"></td>
+        </tr>
+    </table>
+
+    <button onclick="player(true)">Player 1</button>
+    <button onclick="player(false)">Player 2</button>
+    <button onclick="reset()">Reset</button>
+
+
+</body>
+<script src="teamActivity.js"></script>
+
+</html>
+
+
+<script>
+
+let players = true;
+
+function tap(id) {
+    if (players == true) {
+        document.getElementById(id).innerHTML = "<h1>X</h1>";
+    }
+    else {
+        document.getElementById(id).innerHTML = "<h1>O</h1>";
+    }
+}
+
+function player(x) {
+    players = x;
+    console.log(players);
+}
+
+function reset() {
+    for (let i=1; i <= 9; i++) {
+        document.getElementById('box' + i).innerHTML = "";
+        }
+    }
+</script>
