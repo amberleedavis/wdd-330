@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fffdeb;
+}
+
+section {
+    font-size: .9em;
+    width: 270px;
+    padding: 14px;
+    line-height: 20px;
+    line-height: 22px;
+    font-family: 'Raleway', sans-serif;
+    color: #232B35;
+}
+
+h1 {
+    font-size: 1.4em;
+    font-family: 'Playfair Display', serif;
+    color: #232B35;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #232B35;
+}
+
+ul li{
+    font-family: 'Playfair Display', serif;
+    list-style-type: none;
+}
+
+li a:link{
+    text-decoration: none;
+}
