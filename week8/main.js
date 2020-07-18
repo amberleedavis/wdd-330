@@ -1,32 +1,50 @@
-/*
-fetch('https://swapi.dev/api/people/1/')
-    .then(response => response.json())
-    .then(person => {
-        console.log(person.name);
-        console.log(person['name']);
-            document.querySelector('main').innerHTML +=
-                `<h1>${person.name}</h1>
-                <h2>Films</h2>
-                <ul></ul>`;
+window.addEventListener('load', () => { 
+    fetch('https://swapi.dev/api/people/?page=1')
+        .then(result => result.json())
+        .then(people => {
+            document.querySelector('main').innerHTML =
+                        '';
+            people.results.forEach(
+                person => {
+                    document.querySelector('main').innerHTML +=
+                        `<p>${person.name}</p>`;
+                }
+            )
+            if (people.previous == null) {
 
-            person.films.forEach(
-                film => {
-                    document.querySelector('ul').innerHTML +=
-                        `<li><a href="${film}"></li>`;
-                }
-            )
-    });
-*/
+            } 
+                document.querySelector('footer').innerHTML =
+                    `<button id="previous">Previous</button>
+                    <button id="next">Next</button>`
+                    document.getElementById('previous').addEventListener('touchend', () => {
+                        changePage(people.previous);
+                    });
+                    document.getElementById('next').addEventListener('touchend', () => {
+                        changePage(people.next);
+                    });
+        });
+});
 
-fetch('https://swapi.dev/api/people/?page=2')
-    .then(response => response.json())
+function changePage(url) {
+    fetch(url)
+    .then(result => result.json())
     .then(people => {
+        document.querySelector('main').innerHTML =
+                    '';
         people.results.forEach(
             person => {
                 document.querySelector('main').innerHTML +=
-                `<h2>${person.name}</h2>`
-                console.log(person);
+                    `<p>${person.name}</p>`;
             }
         )
-
+            document.querySelector('footer').innerHTML =
+                `<button id="previous">Previous</button>
+                <button id="next">Next</button>`
+                document.getElementById('previous').addEventListener('touchend', () => {
+                    changePage(people.previous);
+                });
+                document.getElementById('next').addEventListener('touchend', () => {
+                    changePage(people.next);
+                });
     });
+}
