@@ -1,7 +1,84 @@
-.add-button{
-    width: 5%;
+body {
+  background: #022b3a;
+  color: #bfdbf7;
+  font-family: 'Lobster', cursive;
 }
 
-.container{
-    position: absolute;
+.container {
+  background: #e1e5f2;
+  max-width: 600px;
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 1px solid #022b3a;
+  font-family: 'Oxygen', sans-serif;
 }
+
+input {
+  border: none;
+  display: block;
+  width: 98.4%;
+  line-height: 1.5;
+  padding: 8px 0 8px 10px;
+  border-bottom: 1px solid #bfdbf7;
+  outline: 0;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 0px;
+  line-height: 1;
+  color: #bfdbf7;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  color: #1f7a8c;
+  font-weight: 400;
+  border-bottom: 1px solid #bfdbf7;
+  line-height: 1.5;
+  padding: 8px 0;
+}
+
+ul li:before {
+  content: "\25A1";
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+ul li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+.finish {
+  color: #bfdbf7;
+}
+
+.finish:before {
+  content: "\2713";
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+.finish:hover {
+  text-decoration: none;
+}
+
+.finish:hover:after {
+  content: "(remove)";
+  color: hotpink;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */
