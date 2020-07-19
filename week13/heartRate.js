@@ -31,12 +31,16 @@
         // Compute the heart beat
 
         var calculate = beat * 6;
+        localStorage.setItem("heartRate", calculate);
+        console.log(localStorage);
 
         // display the heart rate
         document.getElementById('outputDiv3').innerHTML = calculate;
     }
 
-// Store
-localStorage.setItem("calculate", "beat");
-// Retrieve
-document.getElementById("result").innerHTML = localStorage.getItem("calculate");
+    function clearStorage() {
+        localStorage.clear();
+        location.reload();
+    }
+
+  
