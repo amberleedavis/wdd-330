@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Beneficial Heart Rates</title> 
+<link rel="stylesheet" href="heartRate.css">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <h1>Heart Rate Information</h1>
+    <section>
+    <h3>Heart Rate Range</h3>
+Please Enter Your Age: <input type="text" id="age">
+    <button type="button" onclick="beneficialHeartRates()">Heart Rate Average</button>
+    <div id="outputDiv1"></div> - <div id="outputDiv2"></div>
+    <br>
+</section>
+<section>
+    <h3>Calculate Your Heart Rate</h3>
+    Follow these steps to find out your current heart rate:
+    <br/> 1. Find a pulse, either on your wrist or neck.
+    <br/> 2. Once you have found your pulse, count your heart beats for 10 seconds.
+    <br/> 3. Enter in your number of heart beats and click "Calculate".
+    <br/><br/>
+    <input type="text" id="beat">
+    <button type="button" onclick="calculateHeartRate()">Heart Rate Average</button>
+    <div id="outputDiv3"> </div>
+</section>
+
+<div id="result"></div>
+
+
+    <script src="heartRate.js"></script>
+</body>
+</html>

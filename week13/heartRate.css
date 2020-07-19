@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #022b3a;
+    color: #e1e5f2;
+    font-family: 'Raleway', sans-serif;
+}
+h1{
+    font-size: 2.5em;
+    padding: 14px;
+}
+
+h3{ 
+    font-size: 2em;
+}
+h1, h3{
+    font-family: 'Abril Fatface', cursive;
+    line-height: 32px;
+}
+section{
+font-size: .9em;
+width: 270px;
+padding: 14px;
+line-height: 20px;
+line-height: 22px;
+font-family: 'Raleway', sans-serif;
+}
+
+button {
+    background-color: #bfdbf7;
+    border: none;
+    color: #022b3a;
+    padding: 7px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #1f7a8c; /* Green */
+    color: white;
+  }
